@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fresher.name %>
+</p>
+
+<p>
+  <strong>Enroll:</strong>
+  <%= @fresher.enroll %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @fresher.skills %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @fresher.email %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @fresher.contact %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @fresher.room %>
+</p>
+
+<p>
+  <strong>Branch:</strong>
+  <%= @fresher.branch %>
+</p>
+
+<p>
+  <strong>Interests:</strong>
+  <%= @fresher.interests %>
+</p>
+
+<%= link_to 'Edit', edit_fresher_path(@fresher) %> |
+<%= link_to 'Back', freshers_path %>

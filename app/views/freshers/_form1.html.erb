@@ -1,0 +1,62 @@
+<%= form_for(@fresher) do |f| %>
+  <% if @fresher.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fresher.errors.count, "error") %> prohibited this fresher from being saved:</h2>
+
+      <ul>
+      <% @fresher.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p> Basic Information </p>
+  <div class="row">
+  <div class="input-field col s6">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="input-field col s6">
+    <%= f.label :branch %>
+    <%= f.text_field :branch %>
+  </div>
+</div>
+  <div class="row">
+  <div class="input-field col s6">
+    <label>Room Number</label>
+    <%= f.text_field :room %>
+    
+  </div>
+  <div class="input-field col s6">
+    <label>Enrollment Number</label>
+    <%= f.text_field :enroll %>
+  </div>
+</div>
+<p>Tell us about yourself</p>
+<div class="row">
+  <div class="input-field col s12">
+    <label>Skills and interests (separated by commas)</label>
+    <%= f.text_field :skills %>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <label>A few lines about you</label>
+    <%= f.text_area :about, class: "materialize-textarea" %>
+  </div>
+  </div>
+  <p>Contact Information</p>
+<div class="row">
+  <div class="input-field col s6">
+    <label>Contact Number</label>
+    <%= f.text_field :contact %>
+  </div>
+  <div class="input-field col s6">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+</div>
+  <div class="actions">
+    <p class="center"><button class="waves-effect center-align waves-light btn-large blue darken-1" type="submit" name="commit">SUbmit<i class="material-icons small right">flight_takeoff</i></button></p>
+  </div>
+<% end %>
