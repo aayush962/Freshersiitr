@@ -28,7 +28,7 @@ class FreshersController < ApplicationController
 
     respond_to do |format|
       if @fresher.save
-        format.html { redirect_to @fresher, notice: 'Fresher was successfully created.' }
+        format.html { redirect_to thanks_path, notice: 'Your Information has been submitted!' }
         format.json { render :show, status: :created, location: @fresher }
       else
         format.html { render :new }

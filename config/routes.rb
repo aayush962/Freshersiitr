@@ -3,9 +3,12 @@ Rails.application.routes.draw do
 
   get 'pages/home'
 
-  get 'pages/thanks'
+  get 'thanks' => 'pages#thanks'
 
-  resources :freshers
+  
+  get '/freshers' => 'freshers#new'
+
+  post '/freshers' => 'freshers#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
